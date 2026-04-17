@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: rtrw_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: rtrw_db
+      MYSQL_USER: rtrw
+      MYSQL_PASSWORD: rtrwpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+  backend:
+    build: ./backend
+    container_name: rtrw_backend
+    restart: always
+    depends_on:
+      - db
+    environment:
+      DB_DSN: "rtrw:rtrwpassword@tcp(db:3306)/rtrw_db?charset=utf8mb4&parseTime=True&loc=Local"
+      JWT_SECRET: "change-this-super-secret-key-in-production"
+      JWT_EXPIRY: "24h"
+      PORT: "8080"
+      CORS_ORIGIN: "http://localhost:3000"
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+      args:
+        INTERNAL_API_URL: "http://backend:8080"
+    container_name: rtrw_frontend
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
+
+volumes:
+  mysql_data:

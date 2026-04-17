@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Masuk - Civic Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#d3e4fe",
+                        "surface-variant": "#e0e3e5",
+                        "primary": "#000000",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-tint": "#0053db",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "on-primary-fixed": "#00174b",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary-container": "#d0e1fb",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary-container": "#54647a",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#00174b",
+                        "on-secondary-fixed": "#0b1c30",
+                        "inverse-surface": "#2d3133",
+                        "background": "#f7f9fb",
+                        "on-primary-container": "#497cff",
+                        "outline": "#76777d",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#45464d",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary-fixed": "#2a1700",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-primary": "#ffffff",
+                        "on-background": "#191c1e",
+                        "secondary": "#505f76",
+                        "outline-variant": "#c6c6cd",
+                        "tertiary-fixed": "#ffddb8",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#b4c5ff",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "tertiary-container": "#2a1700",
+                        "on-surface": "#191c1e",
+                        "tertiary": "#000000",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-container": "#eceef0",
+                        "on-tertiary-container": "#b87500",
+                        "surface-container-low": "#f2f4f6",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .btn-gradient {
+            background: linear-gradient(135deg, #0053db 0%, #00174b 100%);
+        }
+        .editorial-shadow {
+            box-shadow: 0 10px 30px rgba(25, 28, 30, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<main class="min-h-screen flex flex-col md:flex-row">
+<!-- Left Section: Branding & Illustration (Split Screen) -->
+<section class="hidden md:flex md:w-1/2 lg:w-3/5 bg-surface-container-low relative overflow-hidden flex-col justify-between p-12 lg:p-20">
+<div class="z-10">
+<div class="flex items-center gap-2 mb-12">
+<span class="material-symbols-outlined text-surface-tint text-4xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+<h1 class="text-2xl font-headline font-extrabold text-surface-tint tracking-tighter">Civic Sanctuary</h1>
+</div>
+<div class="max-w-lg">
+<h2 class="text-5xl lg:text-6xl font-headline font-extrabold tracking-tight text-on-background leading-tight">
+                        Sinergi Warga untuk <span class="text-surface-tint">Kemajuan Bersama.</span>
+</h2>
+<p class="mt-6 text-lg text-on-surface-variant font-medium leading-relaxed">
+                        Kelola administrasi RT/RW dengan lebih cerdas, transparan, dan bermartabat dalam satu ekosistem digital yang terintegrasi.
+                    </p>
+</div>
+</div>
+<!-- Illustration Area -->
+<div class="relative mt-auto w-full aspect-video rounded-xl overflow-hidden editorial-shadow">
+<img class="w-full h-full object-cover" data-alt="Modern architectural building interior with large glass windows overlooking a peaceful community park at sunset, soft blue and golden lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWVMgpD9pE93A_BOn-Bz0SAEn3JmVMrepnqdYh90RDb_wWa90upISK4xTsumQDY-Md8VZjfed4t8fPj67ODlE__W0AlITfd0EUUBPMbr9X9rfZhl6aW3sB-jeCB1GDBCp2hp108_pD4_AUok-us8L4VhlWuO9Hjpog5Bef4y-toHfODca9kV5PDQ6FjyCZQplWs-mSY-P350o-EFnElDO38a82yXMIMpck-_YZr7zNFfXQMyamZH82fX4QrY-tSQJfPL_y40_NvSZu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 p-6 backdrop-blur-md bg-white/10 rounded-xl border border-white/10">
+<p class="text-white font-medium italic text-sm">"Sistem ini memudahkan urusan warga, dari pengajuan surat hingga laporan keuangan kas RT yang kini jauh lebih terbuka."</p>
+<p class="text-white/80 text-xs mt-2 font-bold">— Ketua RW 08, Digital Sanctuary</p>
+</div>
+</div>
+<!-- Abstract Background Decoration -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary-fixed-dim/20 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 right-0 w-80 h-80 bg-surface-tint/5 rounded-full blur-3xl"></div>
+</section>
+<!-- Right Section: Login Form -->
+<section class="flex-1 flex items-center justify-center p-6 sm:p-12 lg:p-20 bg-surface">
+<div class="w-full max-w-md">
+<!-- Mobile Logo -->
+<div class="md:hidden flex items-center gap-2 mb-12">
+<span class="material-symbols-outlined text-surface-tint text-3xl" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+<span class="text-xl font-headline font-extrabold text-surface-tint tracking-tighter">Civic Sanctuary</span>
+</div>
+<div class="mb-10">
+<h3 class="text-3xl font-headline font-bold text-on-surface tracking-tight">Selamat Datang</h3>
+<p class="text-on-surface-variant mt-2">Silakan masuk untuk mengakses panel Sinergi Warga.</p>
+</div>
+<form class="space-y-6">
+<!-- Identity Input -->
+<div class="space-y-2">
+<label class="block text-xs font-label font-bold uppercase tracking-widest text-on-surface-variant" for="identity">Email atau NIK</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-4 flex items-center text-outline">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</span>
+<input class="block w-full pl-11 pr-4 py-4 bg-surface-container-low border-none rounded-xl text-on-surface placeholder:text-outline/60 focus:ring-2 focus:ring-surface-tint/20 transition-all outline-none" id="identity" name="identity" placeholder="Contoh: 3201xxxxxxxxxxxx" type="text"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="block text-xs font-label font-bold uppercase tracking-widest text-on-surface-variant" for="password">Kata Sandi</label>
+<a class="text-xs font-semibold text-surface-tint hover:underline transition-all" href="#">Lupa Kata Sandi?</a>
+</div>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-4 flex items-center text-outline">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</span>
+<input class="block w-full pl-11 pr-4 py-4 bg-surface-container-low border-none rounded-xl text-on-surface placeholder:text-outline/60 focus:ring-2 focus:ring-surface-tint/20 transition-all outline-none" id="password" name="password" placeholder="••••••••" type="password"/>
+<button class="absolute inset-y-0 right-0 pr-4 flex items-center text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full btn-gradient text-white py-4 px-6 rounded-xl font-headline font-bold text-sm tracking-wide editorial-shadow hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="submit">
+                        Masuk Ke Dashboard
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+<!-- Help/Support -->
+<div class="mt-10 p-6 bg-secondary-container/30 rounded-xl flex items-start gap-4">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">info</span>
+<div>
+<p class="text-sm font-semibold text-on-secondary-container">Butuh Bantuan?</p>
+<p class="text-xs text-on-secondary-container/80 mt-1 leading-relaxed">Hubungi pengurus RT jika Anda belum memiliki akun atau lupa kredensial login Anda.</p>
+</div>
+</div>
+<!-- Footer Navigation -->
+<footer class="mt-12 pt-8 border-t border-outline-variant/20 flex flex-col items-center gap-4">
+<a class="inline-flex items-center gap-2 text-on-surface-variant hover:text-surface-tint transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform">keyboard_backspace</span>
+<span class="text-sm font-semibold">Kembali ke Beranda</span>
+</a>
+<p class="text-xs text-outline font-medium">© 2024 Digital Civic Excellence. Semua Hak Dilindungi.</p>
+</footer>
+</div>
+</section>
+</main>
+</body></html>

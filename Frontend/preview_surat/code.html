@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Surat Pengantar RT/RW - Civic Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#000000",
+                    "primary-fixed": "#dbe1ff",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "primary-container": "#00174b",
+                    "surface-container-low": "#f2f4f6",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#000000",
+                    "tertiary-container": "#2a1700",
+                    "on-secondary-fixed": "#0b1c30",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#b7c8e1",
+                    "outline-variant": "#c6c6cd",
+                    "surface-variant": "#e0e3e5",
+                    "surface-bright": "#f7f9fb",
+                    "secondary-fixed": "#d3e4fe",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#eff1f3",
+                    "outline": "#76777d",
+                    "tertiary-fixed": "#ffddb8",
+                    "surface": "#f7f9fb",
+                    "secondary": "#505f76",
+                    "on-background": "#191c1e",
+                    "background": "#f7f9fb",
+                    "on-surface": "#191c1e",
+                    "on-secondary-container": "#54647a",
+                    "on-surface-variant": "#45464d",
+                    "surface-dim": "#d8dadc",
+                    "secondary-container": "#d0e1fb",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "on-tertiary-fixed": "#2a1700",
+                    "surface-container-high": "#e6e8ea",
+                    "on-primary-container": "#497cff",
+                    "inverse-primary": "#b4c5ff",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "on-secondary-fixed-variant": "#38485d",
+                    "on-tertiary-container": "#b87500",
+                    "on-primary-fixed": "#00174b",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "surface-tint": "#0053db"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        @media print {
+            .no-print { display: none; }
+            body { background: white; }
+            .print-container { 
+                box-shadow: none !important; 
+                margin: 0 !important; 
+                padding: 0 !important;
+                width: 100% !important;
+            }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Top Navigation Shell (Suppressed for focused task, but kept as TopAppBar template for context) -->
+<nav class="no-print fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm flex justify-between items-center px-8 py-3 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-surface-tint" style="font-size: 28px;">account_balance</span>
+<span class="font-headline tracking-tight font-bold text-xl text-surface-tint">Civic Sanctuary</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-headline text-slate-500 hover:text-blue-600 transition-colors" href="#">Dashboard</a>
+<a class="font-headline text-slate-500 hover:text-blue-600 transition-colors" href="#">Arsip</a>
+<a class="font-headline text-blue-700 border-b-2 border-blue-700 font-bold" href="#">Layanan</a>
+<a class="font-headline text-slate-500 hover:text-blue-600 transition-colors" href="#">Bantuan</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-50 rounded-full transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+</button>
+<button class="p-2 hover:bg-slate-50 rounded-full transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-on-surface-variant">account_circle</span>
+</button>
+</div>
+</nav>
+<!-- Side Navigation Shell (Suppressed as per focused task rule, but visually represented for identity) -->
+<aside class="no-print hidden lg:flex fixed left-0 h-full w-64 flex-col pt-24 pb-8 px-4 bg-slate-50 border-r-0">
+<div class="flex items-center gap-3 px-4 mb-8">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-surface-tint">location_city</span>
+</div>
+<div>
+<p class="font-headline text-sm font-black text-blue-900">Administrasi Warga</p>
+<p class="text-xs text-slate-500">RT 04 / RW 02</p>
+</div>
+</div>
+<div class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-100 rounded-lg mx-2 transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 bg-blue-50 text-blue-700 rounded-lg mx-2 transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-medium">Pengajuan Surat</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-100 rounded-lg mx-2 transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-medium">Warga Saya</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-100 rounded-lg mx-2 transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="campaign">campaign</span>
+<span class="font-medium">Informasi RT</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-100 rounded-lg mx-2 transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-medium">Pengaturan</span>
+</a>
+</div>
+<button class="mt-auto mx-4 bg-gradient-to-r from-surface-tint to-primary-container text-white py-3 rounded-md font-headline text-sm font-bold shadow-md hover:opacity-90 active:scale-95 transition-all">
+            Buat Laporan Baru
+        </button>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-64 pt-24 pb-12 px-6 flex justify-center">
+<!-- Document Container -->
+<div class="print-container w-full max-w-[210mm] bg-white p-[20mm] shadow-sm border border-outline-variant/10 min-h-[297mm] flex flex-col">
+<!-- Document Header -->
+<div class="flex items-center justify-between border-b-2 border-black pb-4 mb-8">
+<div class="flex items-center gap-6">
+<img alt="Logo Wilayah" class="w-20 h-20 object-contain grayscale" data-alt="monochrome official government seal or city emblem emblem with clean architectural lines for administrative document header" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA6nJZBj20qhfxot97Lls4CKchLLbLxrSZKwbsZ-zzlpsmLLyOW0oBXsyrKmo5uPl_or13EsH37mhiiKMX6m8V9Lj0b7Kl5kxO6ogs9dgthQUsvOs-TZPXM6ahjGqc28Pl7o2IvljtkDfuzyAyq-ip_7_wWcp9nLE88mGmbDIo_AcTaCJkfNjvYLKIyQACcQLSiH0SY77ZSgDLjVVcPTPS14mAzw2jFnOo-IgMW5OaXTI59N_IdHx5KYSJIhjcRMO7PaBd1qlCE5xw"/>
+<div class="text-left">
+<h1 class="font-headline text-xl font-extrabold uppercase tracking-widest text-black">Pemerintah Kota Administrasi</h1>
+<h2 class="font-headline text-lg font-bold uppercase text-black">Kecamatan Kebayoran Baru</h2>
+<h3 class="font-headline text-md font-bold uppercase text-black">Kelurahan Selong</h3>
+<p class="font-body text-sm mt-1">Rukun Tetangga 04 / Rukun Warga 02</p>
+</div>
+</div>
+</div>
+<!-- Document Title -->
+<div class="text-center mb-10">
+<h4 class="font-headline text-2xl font-black uppercase tracking-[0.2em] underline decoration-2 underline-offset-8">Surat Pengantar</h4>
+<p class="font-body text-sm mt-4 font-medium italic">Nomor: 145/SP/RT04-RW02/VI/2024</p>
+</div>
+<!-- Document Body -->
+<div class="flex-1">
+<p class="font-body text-base mb-6 leading-relaxed">
+                    Yang bertanda tangan di bawah ini Ketua RT 04 / RW 02 Kelurahan Selong, Kecamatan Kebayoran Baru, dengan ini menerangkan bahwa:
+                </p>
+<!-- Citizen Data Table -->
+<div class="mb-8 space-y-4">
+<div class="grid grid-cols-12 gap-2">
+<div class="col-span-4 font-body font-semibold">Nama Lengkap</div>
+<div class="col-span-1 text-center">:</div>
+<div class="col-span-7 font-headline font-bold uppercase tracking-tight">ADITYA PRATAMA PUTRA</div>
+</div>
+<div class="grid grid-cols-12 gap-2">
+<div class="col-span-4 font-body font-semibold">Tempat, Tanggal Lahir</div>
+<div class="col-span-1 text-center">:</div>
+<div class="col-span-7 font-body">Jakarta, 14 Agustus 1992</div>
+</div>
+<div class="grid grid-cols-12 gap-2">
+<div class="col-span-4 font-body font-semibold">NIK</div>
+<div class="col-span-1 text-center">:</div>
+<div class="col-span-7 font-body tracking-wider">3174011408920001</div>
+</div>
+<div class="grid grid-cols-12 gap-2">
+<div class="col-span-4 font-body font-semibold">Pekerjaan</div>
+<div class="col-span-1 text-center">:</div>
+<div class="col-span-7 font-body">Karyawan Swasta</div>
+</div>
+<div class="grid grid-cols-12 gap-2">
+<div class="col-span-4 font-body font-semibold">Alamat Lengkap</div>
+<div class="col-span-1 text-center">:</div>
+<div class="col-span-7 font-body leading-tight">Jl. Jenggala No. 45, Kel. Selong, Kec. Kebayoran Baru, Jakarta Selatan, 12110</div>
+</div>
+</div>
+<!-- Purpose Section -->
+<div class="bg-slate-50/50 p-6 rounded-lg mb-8 border border-slate-200/50">
+<p class="font-label text-xs uppercase tracking-widest text-slate-500 mb-2">Keperluan Surat:</p>
+<p class="font-body text-base font-semibold text-black leading-relaxed">
+                        Permohonan Pembuatan Kartu Tanda Penduduk (KTP) Baru dikarenakan masa berlaku habis dan perubahan status domisili.
+                    </p>
+</div>
+<p class="font-body text-base leading-relaxed">
+                    Demikian surat pengantar ini diberikan untuk dapat dipergunakan sebagaimana mestinya. Atas perhatian dan kerjasamanya kami ucapkan terima kasih.
+                </p>
+</div>
+<!-- Footer / Signatures -->
+<div class="mt-12">
+<div class="flex justify-end mb-8">
+<p class="font-body text-base">Jakarta, 24 Juni 2024</p>
+</div>
+<div class="grid grid-cols-2 gap-12 text-center">
+<!-- Ketua RW -->
+<div class="relative py-4">
+<p class="font-body font-bold mb-20 uppercase tracking-tighter">Mengetahui,<br/>Ketua RW 02</p>
+<div class="relative inline-block">
+<!-- Digital Stamp Placeholder -->
+<div class="absolute -top-16 -left-8 opacity-20 transform -rotate-12 pointer-events-none">
+<span class="material-symbols-outlined text-blue-800" style="font-size: 100px;">verified</span>
+</div>
+<p class="font-headline font-extrabold uppercase border-b border-black inline-block px-2">BAMBANG SUDARMONO</p>
+</div>
+</div>
+<!-- Ketua RT -->
+<div class="relative py-4">
+<p class="font-body font-bold mb-20 uppercase tracking-tighter">Hormat Kami,<br/>Ketua RT 04</p>
+<div class="relative inline-block">
+<!-- Digital Signature/Stamp Placeholder -->
+<div class="absolute -top-16 -left-8 opacity-20 transform rotate-6 pointer-events-none">
+<span class="material-symbols-outlined text-blue-800" style="font-size: 100px;">verified_user</span>
+</div>
+<p class="font-headline font-extrabold uppercase border-b border-black inline-block px-2">HENDRA KUSUMA</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Print Actions (Floating UI) -->
+<div class="no-print fixed bottom-8 right-8 flex flex-col gap-3">
+<button class="flex items-center gap-3 bg-black text-white px-6 py-4 rounded-full font-headline font-bold shadow-xl hover:bg-slate-800 transition-all active:scale-95" onclick="window.print()">
+<span class="material-symbols-outlined">print</span>
+                    Cetak Dokumen
+                </button>
+<button class="flex items-center gap-3 bg-white text-black border border-outline-variant px-6 py-4 rounded-full font-headline font-bold shadow-lg hover:bg-slate-50 transition-all active:scale-95">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+                    Unduh PDF
+                </button>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="no-print md:hidden fixed bottom-0 w-full bg-white/90 backdrop-blur-md px-6 py-4 flex justify-around items-center border-t border-slate-100 z-50">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-bold">Dashboard</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-blue-700">
+<span class="material-symbols-outlined">description</span>
+<span class="text-[10px] font-bold">Layanan</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-[10px] font-bold">Notifikasi</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-bold">Profil</span>
+</button>
+</nav>
+</body></html>

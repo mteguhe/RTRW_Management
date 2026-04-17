@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sinergi Warga - Civic Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#d3e4fe",
+                    "surface-variant": "#e0e3e5",
+                    "primary": "#000000",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#b7c8e1",
+                    "primary-fixed": "#dbe1ff",
+                    "surface-tint": "#0053db",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "on-primary-fixed": "#00174b",
+                    "on-secondary-fixed-variant": "#38485d",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-container-high": "#e6e8ea",
+                    "secondary-container": "#d0e1fb",
+                    "surface-dim": "#d8dadc",
+                    "on-secondary-container": "#54647a",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#00174b",
+                    "on-secondary-fixed": "#0b1c30",
+                    "inverse-surface": "#2d3133",
+                    "background": "#f7f9fb",
+                    "on-primary-container": "#497cff",
+                    "outline": "#76777d",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#45464d",
+                    "surface-bright": "#f7f9fb",
+                    "on-tertiary-fixed": "#2a1700",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "on-primary": "#ffffff",
+                    "on-background": "#191c1e",
+                    "secondary": "#505f76",
+                    "outline-variant": "#c6c6cd",
+                    "tertiary-fixed": "#ffddb8",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#b4c5ff",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f7f9fb",
+                    "tertiary-container": "#2a1700",
+                    "on-surface": "#191c1e",
+                    "tertiary": "#000000",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-container": "#eceef0",
+                    "on-tertiary-container": "#b87500",
+                    "surface-container-low": "#f2f4f6",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; color: #191c1e; }
+        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl no-border tonal-transition">
+<div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+<div class="text-2xl font-extrabold text-blue-700 tracking-tighter font-headline">
+                Sinergi Warga
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-blue-700 font-bold border-b-2 border-blue-700 pb-1 font-manrope tracking-tight text-lg" href="#">Beranda</a>
+<a class="text-slate-600 hover:text-blue-600 transition-colors font-manrope tracking-tight font-bold text-lg" href="#">Kegiatan</a>
+<a class="text-slate-600 hover:text-blue-600 transition-colors font-manrope tracking-tight font-bold text-lg" href="#">Pengumuman</a>
+<a class="text-slate-600 hover:text-blue-600 transition-colors font-manrope tracking-tight font-bold text-lg" href="#">Tentang Kami</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 bg-gradient-to-r from-surface-tint to-primary-container text-white rounded-md text-sm font-semibold hover:opacity-80 transition-all active:scale-95 duration-200">
+                    Masuk
+                </button>
+</div>
+</div>
+</nav>
+<main class="flex-grow pt-20">
+<!-- Hero Section: Architectural Minimalism -->
+<section class="relative overflow-hidden py-24 md:py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-widest mb-6">Civic Sanctuary</span>
+<h1 class="text-5xl md:text-7xl font-extrabold text-on-surface tracking-tight leading-[1.1] mb-8">
+                        Gotong Royong Digital untuk Lingkungan Lebih Baik
+                    </h1>
+<p class="text-lg text-on-surface-variant mb-10 max-w-xl leading-relaxed">
+                        Mewujudkan transparansi dan kemudahan layanan administratif RT/RW melalui satu platform terpadu yang modern, inklusif, dan efisien.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-gradient-to-r from-surface-tint to-primary-container text-white rounded-md font-bold text-md shadow-lg shadow-blue-500/20 hover:scale-105 transition-transform active:scale-95">
+                            Pelajari Selengkapnya
+                        </button>
+<button class="px-8 py-4 bg-transparent border border-outline-variant/20 text-on-surface rounded-md font-bold text-md hover:bg-surface-container-low transition-colors">
+                            Lihat Dashboard
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-full bg-primary-container/5 absolute -top-20 -right-20 w-96 h-96 blur-3xl"></div>
+<div class="relative rounded-xl overflow-hidden shadow-2xl">
+<img alt="Community center architecture" class="w-full h-full object-cover" data-alt="Modern architectural community center with glass walls and clean lines during blue hour with warm interior lights glowing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyweJQ3_duTcqbz69dBOj6zKjnu0ljleB0H0rSLtj7CgY-g0H35KPEfbc9uYgOmp5rr2-QSWX1_8Tm6K6lnLddVlpE5QpbA0ju-xpry75S2XpnDAZvjLG06k8KP_r6JuWZxvL9N8aL8kvzVAdgBR1kiKkmHM2ZJr0bQMjAm6om8M6lefBDiC67_cCLhYEpZIaYVURuIa9wX3qRyyop797kiR34K0V2I5Qwi9Pry9gBs0gO4l--HEC35ryASmeZZZDYsUhYYyon-CMo"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Activities Section: Bento Grid Layout -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<p class="text-sm font-bold text-surface-tint uppercase tracking-widest mb-2">Agenda Lingkungan</p>
+<h2 class="text-4xl font-extrabold tracking-tight text-on-surface">Kegiatan Mendatang</h2>
+</div>
+<a class="text-surface-tint font-bold flex items-center gap-2 group" href="#">
+                        Lihat Semua Kegiatan 
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Event 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col h-full hover:shadow-xl transition-shadow duration-300">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-container">cleaning_services</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Kerja Bakti Minggu Pagi</h3>
+<p class="text-on-surface-variant mb-8 flex-grow">Pembersihan saluran air dan taman warga untuk antisipasi musim hujan.</p>
+<div class="pt-6 border-t border-outline-variant/10">
+<div class="flex items-center gap-3 text-sm font-medium text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-lg">calendar_month</span>
+                                Minggu, 24 Nov 2024
+                            </div>
+<div class="flex items-center gap-3 text-sm font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">location_on</span>
+                                Area Fasum RT 04
+                            </div>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col h-full hover:shadow-xl transition-shadow duration-300">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant">groups</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Rapat Bulanan RT 04</h3>
+<p class="text-on-surface-variant mb-8 flex-grow">Pembahasan anggaran keamanan dan rencana renovasi gapura pintu masuk.</p>
+<div class="pt-6 border-t border-outline-variant/10">
+<div class="flex items-center gap-3 text-sm font-medium text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-lg">calendar_month</span>
+                                Sabtu, 30 Nov 2024
+                            </div>
+<div class="flex items-center gap-3 text-sm font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">location_on</span>
+                                Balai Warga Lt. 1
+                            </div>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col h-full hover:shadow-xl transition-shadow duration-300">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant">child_care</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Posyandu Balita</h3>
+<p class="text-on-surface-variant mb-8 flex-grow">Pemeriksaan rutin kesehatan balita dan pembagian vitamin tambahan.</p>
+<div class="pt-6 border-t border-outline-variant/10">
+<div class="flex items-center gap-3 text-sm font-medium text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-lg">calendar_month</span>
+                                Selasa, 03 Des 2024
+                            </div>
+<div class="flex items-center gap-3 text-sm font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">location_on</span>
+                                Sekretariat RT
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Information & News Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-16">
+<p class="text-sm font-bold text-surface-tint uppercase tracking-widest mb-2">Warta Digital</p>
+<h2 class="text-4xl font-extrabold tracking-tight text-on-surface">Informasi &amp; Pengumuman</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Main News Item -->
+<div class="group relative rounded-xl overflow-hidden aspect-[16/10] lg:aspect-auto">
+<img alt="Community meeting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="People sitting around a wooden table in a brightly lit modern office space having a collaborative and friendly discussion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTyOuSH1Wt1unEJVi3Y84kj9_rCYI-VNlozxyVQ0zHvUrA-MOsUnflgysONXxQHmoOHogbxZB8_UOj4QwNSbsJugD8WlLHQcXed13RwyzXZaad_sjOzYpfKQ79joI45gdWtnbfouhwydeXzXf1k0jHClIdksETVhjtnElOOJ17buvgzfVTjZdAYVoJbtncncGdR-rLRCPCxR3jw2f6aPnOMCmFx1iIiUHoydvqAQZP1G7jpYv2WMM6N1Nuzc5r9FJaFxoFUaK9o-By"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
+<span class="inline-block px-3 py-1 bg-surface-tint text-white text-[10px] font-bold uppercase tracking-widest mb-4 w-max">Pengumuman Penting</span>
+<h3 class="text-3xl font-bold text-white mb-4 leading-tight">Digitalisasi Pengajuan Surat Pengantar RT/RW Kini Tersedia</h3>
+<p class="text-white/80 mb-6">Warga kini dapat mengajukan surat domisili dan keterangan lainnya secara mandiri melalui aplikasi Sinergi Warga.</p>
+<a class="text-white font-bold flex items-center gap-2 group/btn" href="#">
+                                Baca Selengkapnya 
+                                <span class="material-symbols-outlined text-lg group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Sidebar News List -->
+<div class="flex flex-col gap-6">
+<div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer">
+<span class="text-xs font-bold text-surface-tint mb-2 block uppercase">Update Keamanan</span>
+<h4 class="text-xl font-bold text-on-surface mb-2">Penambahan CCTV di Area Parkir Timur</h4>
+<p class="text-sm text-on-surface-variant">Tiga unit kamera baru telah terpasang untuk meningkatkan keamanan kendaraan warga di blok C.</p>
+</div>
+<div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer">
+<span class="text-xs font-bold text-surface-tint mb-2 block uppercase">Sosial &amp; Budaya</span>
+<h4 class="text-xl font-bold text-on-surface mb-2">Pembukaan Pendaftaran Kursus Tari Tradisional</h4>
+<p class="text-sm text-on-surface-variant">Program khusus anak-anak lingkungan yang akan dibimbing langsung oleh warga senior.</p>
+</div>
+<div class="p-8 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer">
+<span class="text-xs font-bold text-surface-tint mb-2 block uppercase">Lingkungan</span>
+<h4 class="text-xl font-bold text-on-surface mb-2">Jadwal Pengangkutan Sampah Daur Ulang</h4>
+<p class="text-sm text-on-surface-variant">Mulai Desember, sampah anorganik akan dijemput setiap hari Rabu minggu kedua.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Hero Callout -->
+<section class="py-24 max-w-7xl mx-auto px-6">
+<div class="bg-surface-container-highest rounded-2xl p-12 md:p-20 relative overflow-hidden">
+<div class="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">
+<span class="text-6xl mb-8 material-symbols-outlined text-surface-tint" style="font-variation-settings: 'FILL' 1;">diversity_3</span>
+<h2 class="text-4xl md:text-5xl font-black text-on-surface mb-6 leading-tight">Bersama Kita Bangun Lingkungan yang Nyaman</h2>
+<p class="text-lg text-on-surface-variant mb-10">Jadilah bagian aktif dari perubahan digital di lingkungan kita. Unduh aplikasi warga sekarang.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="flex items-center gap-3 px-8 py-4 bg-on-background text-white rounded-xl font-bold">
+<span class="material-symbols-outlined">play_store_installed</span>
+                            Play Store
+                        </button>
+<button class="flex items-center gap-3 px-8 py-4 bg-on-background text-white rounded-xl font-bold">
+<span class="material-symbols-outlined">phone_iphone</span>
+                            App Store
+                        </button>
+</div>
+</div>
+<div class="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+<span class="text-[300px] font-black leading-none">RT04</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Section -->
+<footer class="w-full py-12 px-6 mt-auto bg-slate-50 tonal-shift">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-xs">
+<div class="font-manrope font-black text-blue-900 text-2xl mb-6">
+                    Sinergi Warga
+                </div>
+<p class="font-inter text-sm text-slate-500 leading-relaxed mb-6">
+                    Sistem manajemen warga modern untuk menciptakan lingkungan yang lebih transparan dan harmonis melalui teknologi.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-surface-tint hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-surface-tint hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-surface-tint hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-12">
+<div>
+<h5 class="font-bold text-on-surface mb-6 uppercase tracking-wider text-xs">Sekretariat</h5>
+<address class="not-italic font-inter text-sm text-slate-500 leading-relaxed">
+                        Jl. Merpati No. 12<br/>
+                        Blok C - Perumahan Griya Asri<br/>
+                        Kec. Makmur, Kota Indah<br/>
+                        info@sinergiwarga.id
+                    </address>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-bold text-on-surface mb-2 uppercase tracking-wider text-xs">Menu</h5>
+<a class="text-slate-500 hover:text-blue-600 transition-all font-inter text-sm" href="#">Kebijakan Privasi</a>
+<a class="text-slate-500 hover:text-blue-600 transition-all font-inter text-sm" href="#">Syarat &amp; Ketentuan</a>
+<a class="text-slate-500 hover:text-blue-600 transition-all font-inter text-sm" href="#">Bantuan</a>
+<a class="text-slate-500 hover:text-blue-600 transition-all font-inter text-sm" href="#">Kontak</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-inter text-sm text-slate-500">
+                © 2024 Digital Civic Excellence. Semua Hak Dilindungi.
+            </p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2 text-xs text-slate-400 font-medium">
+<span class="w-2 h-2 rounded-full bg-green-500"></span> Sistem Online
+                </span>
+</div>
+</div>
+</footer>
+</body></html>

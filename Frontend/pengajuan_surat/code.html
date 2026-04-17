@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pengajuan Surat - Civic Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#497cff",
+                        "primary": "#000000",
+                        "on-surface": "#191c1e",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-low": "#f2f4f6",
+                        "primary-container": "#00174b",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-container": "#d0e1fb",
+                        "tertiary": "#000000",
+                        "inverse-surface": "#2d3133",
+                        "surface-tint": "#0053db",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-background": "#191c1e",
+                        "background": "#f7f9fb",
+                        "surface-container": "#eceef0",
+                        "secondary": "#505f76",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d8dadc",
+                        "on-tertiary-fixed": "#2a1700",
+                        "on-surface-variant": "#45464d",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-secondary-container": "#54647a",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "tertiary-fixed": "#ffddb8",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#eff1f3",
+                        "outline-variant": "#c6c6cd",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "on-tertiary-container": "#b87500",
+                        "primary-fixed": "#dbe1ff",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "on-primary-fixed": "#00174b",
+                        "secondary-fixed": "#d3e4fe",
+                        "inverse-primary": "#b4c5ff",
+                        "outline": "#76777d",
+                        "tertiary-container": "#2a1700",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#0b1c30"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex">
+<!-- SideNavBar (Shared Component) -->
+<aside class="h-screen w-64 fixed left-0 top-0 z-50 bg-white dark:bg-slate-950 flex flex-col border-r border-slate-100 dark:border-slate-800 tonal-layering surface-container-low shadow-xl shadow-slate-200/50 dark:shadow-none">
+<div class="p-6 flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+</div>
+<div>
+<h2 class="text-lg font-black tracking-tighter text-blue-800 dark:text-blue-300">Administrasi Warga</h2>
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Lingkungan Digital</p>
+</div>
+</div>
+<nav class="flex-1 mt-4 px-2">
+<a class="text-slate-600 dark:text-slate-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:text-slate-900 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg transition-all group" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-sm font-semibold">Dashboard</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:text-slate-900 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg transition-all group" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="text-sm font-semibold">Warga</span>
+</a>
+<!-- Active Tab: Surat -->
+<a class="bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-lg mx-2 my-1 px-4 py-3 flex items-center gap-3 font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="description" style="font-variation-settings: 'FILL' 1;">description</span>
+<span class="text-sm font-semibold">Surat</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:text-slate-900 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg transition-all group" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="text-sm font-semibold">Keuangan</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:text-slate-900 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg transition-all group" href="#">
+<span class="material-symbols-outlined" data-icon="campaign">campaign</span>
+<span class="text-sm font-semibold">Pengumuman</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:text-slate-900 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg transition-all group" href="#">
+<span class="material-symbols-outlined" data-icon="report">report</span>
+<span class="text-sm font-semibold">Pengaduan</span>
+</a>
+</nav>
+<div class="p-4 mt-auto">
+<button class="w-full py-3 bg-gradient-to-r from-surface-tint to-primary-container text-white rounded-xl text-sm font-bold shadow-lg shadow-blue-200/50 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                Buat Laporan Baru
+            </button>
+<div class="mt-6 pt-6 border-t border-slate-100">
+<a class="text-slate-500 text-xs uppercase font-bold tracking-widest px-4 py-2 flex items-center gap-3 hover:text-blue-600 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="help">help</span>
+                    Bantuan
+                </a>
+<a class="text-slate-500 text-xs uppercase font-bold tracking-widest px-4 py-2 flex items-center gap-3 hover:text-error transition-colors" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="logout">logout</span>
+                    Keluar
+                </a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 flex-1 flex flex-col min-h-screen">
+<!-- TopAppBar (Shared Component) -->
+<header class="bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-md sticky top-0 z-40 w-full px-8 py-4 flex justify-between items-center docked full-width flat-no-shadows tonal-shift-bg-surface-container-low">
+<div class="flex items-center gap-8">
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100 font-headline">Civic Sanctuary</h1>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-700 text-sm uppercase tracking-wider py-1" href="#">Layanan Surat</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm uppercase tracking-wider hover:text-blue-700 transition-colors py-1" href="#">Status Pengajuan</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm uppercase tracking-wider hover:text-blue-700 transition-colors py-1" href="#">Arsip Digital</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-200/50 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-200/50 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="h-8 w-px bg-slate-200 mx-2"></div>
+<div class="flex items-center gap-3">
+<div class="text-right hidden sm:block">
+<p class="text-xs font-bold text-slate-900">Budi Santoso</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-tighter">Warga RT 04/02</p>
+</div>
+<img alt="User profile avatar" class="w-10 h-10 rounded-full object-cover ring-2 ring-white" data-alt="portrait of a professional middle aged man in a clean white shirt smiling with a neutral gray background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADHfTGUOYRptsERDTC-VT4zDds2DreH_MiHi-S9QJevu9hFVK7N8BIJNBgrXXAix78RJKvOBYCTR7fIRDdCoIVycb26m97xf72nUFq9p5-wSBzBIUVyWWDW042zq23nuho9M0LlC-I_0KxKPWEb3gBqoiiwBYOyg7MM4upYp1exUCbFkK6FFuUye8tfOZw64O0sU3RlCZF1gQ1ItowNtF4QtZ9I0XF-Ax-qWPa0tjJ4tLYFLu5ny6lgW5GM6r8J0OGa9Ew6WFRIyvt"/>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="p-10 max-w-5xl mx-auto w-full">
+<!-- Hero Title Section -->
+<div class="mb-12">
+<span class="label-md uppercase tracking-[0.2em] text-on-primary-fixed-variant font-bold text-xs">Administrasi Mandiri</span>
+<h2 class="display-sm text-4xl font-extrabold tracking-tight mt-2 text-primary font-headline">Formulir Pengajuan Surat</h2>
+<p class="mt-4 text-on-surface-variant max-w-2xl leading-relaxed">
+                    Silakan lengkapi formulir di bawah ini untuk mengajukan surat keterangan resmi. Tim administrasi kami akan meninjau permohonan Anda dalam waktu 1-2 hari kerja.
+                </p>
+</div>
+<!-- Main Form Section (Asymmetric Grid) -->
+<form action="#" class="grid grid-cols-1 lg:grid-cols-12 gap-8" method="POST">
+<!-- Left Column: Form Fields -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Section 1: Jenis Surat & Identitas -->
+<div class="bg-surface-container-lowest rounded-xl p-8 transition-all">
+<h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-600" data-icon="fact_check">fact_check</span>
+                            Klasifikasi Pengajuan
+                        </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-slate-500">Jenis Surat</label>
+<select class="w-full bg-surface-container-low border-none rounded-xl py-3 px-4 text-sm focus:ring-2 focus:ring-surface-tint/20 focus:bg-white transition-all appearance-none cursor-pointer">
+<option value="domisili">Surat Keterangan Domisili</option>
+<option value="pengantar">Surat Pengantar (Umum)</option>
+<option value="tidak_mampu">Surat Keterangan Tidak Mampu</option>
+<option value="kematian">Surat Keterangan Kematian</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-slate-500">Urgensi</label>
+<div class="flex gap-4 h-full items-center">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="text-surface-tint focus:ring-surface-tint border-none bg-surface-container" name="urgency" type="radio"/>
+<span class="text-sm">Normal</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="text-error focus:ring-error border-none bg-surface-container" name="urgency" type="radio"/>
+<span class="text-sm">Mendesak</span>
+</label>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-slate-50 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-slate-500">Nama Lengkap</label>
+<input class="w-full bg-surface-container text-slate-500 border-none rounded-xl py-3 px-4 text-sm font-medium" disabled="" type="text" value="Budi Santoso"/>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-slate-500">NIK (Sesuai KTP)</label>
+<input class="w-full bg-surface-container text-slate-500 border-none rounded-xl py-3 px-4 text-sm font-medium" disabled="" type="text" value="3275XXXXXXXX0001"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Keperluan -->
+<div class="bg-surface-container-lowest rounded-xl p-8">
+<h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-600" data-icon="edit_note">edit_note</span>
+                            Detail Keperluan
+                        </h3>
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-slate-500">Tujuan &amp; Keperluan Surat</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-xl py-3 px-4 text-sm focus:ring-2 focus:ring-surface-tint/20 focus:bg-white transition-all" placeholder="Contoh: Digunakan sebagai syarat pembuatan rekening bank atau melamar pekerjaan..." rows="4"></textarea>
+<p class="text-[10px] text-slate-400 italic mt-2">Sebutkan secara spesifik agar proses verifikasi lebih cepat.</p>
+</div>
+</div>
+<!-- Section 3: Upload Documents -->
+<div class="bg-surface-container-lowest rounded-xl p-8">
+<h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-600" data-icon="cloud_upload">cloud_upload</span>
+                            Dokumen Pendukung
+                        </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="border-2 border-dashed border-outline-variant/30 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-blue-50/30 transition-colors group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="add_a_photo">add_a_photo</span>
+</div>
+<span class="text-sm font-bold text-slate-900">Upload KTP</span>
+<span class="text-[10px] text-slate-500 mt-1 uppercase tracking-tighter">JPG, PNG, PDF (Max 2MB)</span>
+</div>
+<div class="border-2 border-dashed border-outline-variant/30 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:bg-blue-50/30 transition-colors group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+</div>
+<span class="text-sm font-bold text-slate-900">Upload Kartu Keluarga</span>
+<span class="text-[10px] text-slate-500 mt-1 uppercase tracking-tighter">Diperlukan untuk Domisili</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Sidebar / Summary -->
+<div class="lg:col-span-4 space-y-6">
+<div class="bg-primary-container text-white rounded-xl p-8 sticky top-24 overflow-hidden">
+<!-- Decorative Texture -->
+<div class="absolute -right-10 -top-10 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
+<h3 class="text-xl font-bold font-headline mb-4 relative z-10">Ringkasan Pengajuan</h3>
+<div class="space-y-6 relative z-10">
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest opacity-60">Estimasi Selesai</p>
+<p class="text-sm font-semibold">24 - 48 Jam Kerja</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest opacity-60">Metode Verifikasi</p>
+<p class="text-sm font-semibold">Validasi NIK &amp; TTD Ketua RT</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-sm" data-icon="smartphone">smartphone</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest opacity-60">Notifikasi</p>
+<p class="text-sm font-semibold">WhatsApp &amp; App Notification</p>
+</div>
+</div>
+</div>
+<div class="mt-10 pt-8 border-t border-white/10">
+<button class="w-full py-4 bg-white text-primary-container rounded-xl font-bold text-sm hover:bg-blue-50 active:scale-95 transition-all shadow-xl shadow-black/20" type="submit">
+                                Ajukan Sekarang
+                            </button>
+<p class="text-[10px] text-center mt-4 opacity-50 uppercase tracking-widest font-medium">
+                                Dengan menekan tombol, Anda menyetujui syarat &amp; ketentuan pengolahan data.
+                            </p>
+</div>
+</div>
+<!-- Help Card -->
+<div class="bg-surface-container-low rounded-xl p-6 border border-outline-variant/10">
+<h4 class="text-xs font-bold uppercase tracking-widest mb-4">Butuh Bantuan?</h4>
+<div class="flex items-center gap-4 p-3 bg-white rounded-xl mb-3">
+<span class="material-symbols-outlined text-blue-600" data-icon="call">call</span>
+<div>
+<p class="text-xs font-bold">Hubungi Sekretariat</p>
+<p class="text-[10px] text-slate-500">0812-3456-7890 (RT 04)</p>
+</div>
+</div>
+<a class="text-[10px] font-bold text-surface-tint uppercase flex items-center justify-center gap-1 hover:underline" href="#">
+                            Lihat Panduan Pengajuan
+                            <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</form>
+</div>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-12 mt-auto bg-slate-50 dark:bg-slate-900 flex flex-col items-center justify-center space-y-6 px-4 text-center border-t border-slate-200/30 dark:border-slate-800/30">
+<div class="flex gap-8">
+<a class="text-slate-500 dark:text-slate-400 text-xs tracking-wide uppercase font-medium hover:underline hover:text-blue-500 transition-all" href="#">Tentang Kami</a>
+<a class="text-slate-500 dark:text-slate-400 text-xs tracking-wide uppercase font-medium hover:underline hover:text-blue-500 transition-all" href="#">Kebijakan Privasi</a>
+<a class="text-slate-500 dark:text-slate-400 text-xs tracking-wide uppercase font-medium hover:underline hover:text-blue-500 transition-all" href="#">Hubungi RT</a>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-xs tracking-wide uppercase font-medium">© 2024 Civic Sanctuary Management. All Rights Reserved.</p>
+</footer>
+</main>
+</body></html>
